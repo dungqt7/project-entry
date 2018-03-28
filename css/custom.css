@@ -1,0 +1,62 @@
+.image {
+    width: 108%;
+    height: 201px;
+    margin-left: -15px
+}
+
+.user {
+    width: 50%;
+}
+
+.input-text {
+    border: none;
+    background: none;
+    margin-left:70px;
+}
+
+.demo {
+   border-bottom:  1px solid black;
+}
+
+.input {
+    border: none;
+    box-shadow: none;
+    outline: 0px !important;
+}
+
+.login {
+    width: 114px;
+    background-color: orange;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+.forgot {
+    color: orange;
+}
+
+.register {
+    color: orange;
+    margin-left: 158px;
+    margin-top: -25px;
+}
+
+#total {
+    background-color:white;
+    box-shadow: 0 0 30px 10px gray;
+    height: 201px;
+    position: relative;
+}
+
+.form-login {
+    background-color: white !important;
+    height: 200px;
+}
+
+.main {
+    background-color: #FFCC99;
+}
+.close1{
+    position: absolute;
+    top: 0;
+}
