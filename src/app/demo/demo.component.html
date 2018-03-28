@@ -1,30 +1,30 @@
 <header class="header">
-    <div class="container">
+    <div class="container" [ngStyle]="{'background-color' : background ? 'white' : ''}">
         <div class="row">
             <div class="col-md-6">
-                <img src="https://cdn-wp.nkdev.info/snow/demo-one-page-agency/wp-content/themes/snow/assets/images/logo-light.svg" width="100px">
-                <img src="https://cdn-wp.nkdev.info/snow/demo-one-page-agency/wp-content/themes/snow/assets/images/logo.svg" style="display:none">
+                <img src="https://cdn-wp.nkdev.info/snow/demo-one-page-agency/wp-content/themes/snow/assets/images/logo-light.svg" [ngStyle]="{'display' : hiden ? 'none' : 'block'} " width="100px">
+                <img src="https://cdn-wp.nkdev.info/snow/demo-one-page-agency/wp-content/themes/snow/assets/images/logo.svg" style="display:none" [ngStyle]="{'display' : block ? 'block' : 'none'} ">
             </div>
 
             <div class="col-6">
                 <ul>
                     <li>
-                        <a href="">About</a>
+                        <a href="" [ngStyle]="{'color' : ul ? 'inherit' : '#bfbfbf'}">About</a>
                     </li>
                     <li>
-                        <a href="">Contact</a>
+                        <a href="" [ngStyle]="{'color' : ul ? 'inherit' : '#bfbfbf'}">Contact</a>
                     </li>
                     <li>
-                        <a href="">Portfolio</a>
+                        <a href="" [ngStyle]="{'color' : ul ? 'inherit' : '#bfbfbf'}">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#">Blog</a>
+                        <a href="#" [ngStyle]="{'color' : ul ? 'inherit' : '#bfbfbf'}">Blog</a>
                     </li>
                     <li>
-                        <a href="#" (click)="open()">Login</a>
+                        <a href="#" (click)="open()" [ngStyle]="{'color' : ul ? 'inherit' : '#bfbfbf'}">Login</a>
                     </li>
                     <li>
-                        <a href="#" (click)="open1()">Register</a>
+                        <a href="#" (click)="open1()" [ngStyle]="{'color' : ul ? 'inherit' : '#bfbfbf'}">Register</a>
                     </li>
                 </ul>
             </div>

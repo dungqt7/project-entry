@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material';
 import { FormLoginComponent } from '../form-login/form-login.component';
@@ -26,6 +26,11 @@ export class DemoComponent implements OnInit {
   messageFormControl = new FormControl('', [
     Validators.required,
   ]);
+  block;
+  background;
+  ul;
+  hover;
+  hiden = false;
   isvalid;
   send(event) {
     // tslint:disable-next-line:max-line-length
@@ -51,6 +56,23 @@ export class DemoComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
     });
+  }
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (number > 40) {
+      this.hiden = true;
+      this.block = true;
+      this.background = true;
+      this.ul = true;
+      this.hover = true;
+    } else {
+      this.hiden = false;
+      this.block = false;
+      this.background = false;
+      this.ul = false;
+      this.hover = false;
+    }
   }
   ngOnInit() {
   }
