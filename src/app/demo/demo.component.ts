@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material';
+import { FormLoginComponent } from '../form-login/form-login.component';
+import { RegisterComponent } from '../register/register.component';
 
 @Component({
   selector: 'app-demo',
@@ -31,7 +34,24 @@ export class DemoComponent implements OnInit {
     }
     this.isvalid = true;
   }
-  constructor() { }
+
+  constructor(public dialog: MatDialog) { }
+  open(): void {
+    const dialogRef = this.dialog.open(FormLoginComponent, {
+      width: '700px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
+  open1(): void {
+    const dialogRef = this.dialog.open(RegisterComponent, {
+      width: '700px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
   ngOnInit() {
   }
 

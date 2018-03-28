@@ -1,0 +1,63 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3">
+    <div class="form-group row">
+        <label class="col">
+      UserName
+      <input type="email" formControlName="username" class="form-control username">
+      <mat-error *ngIf="nameFormControl.hasError('required') && isvalid">
+        UserName
+        <strong> is required</strong>
+    </mat-error>
+    </label>
+    </div>
+    <div class="col alert alert-danger" role="alert" *ngIf="form.hasError('invalidusername', ['username']) && form.get('username').touched " [ngClass]="{err: ispecial}">
+        Do ton tai username
+    </div>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" [formControl]="emailFormControl">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is
+            <strong>required</strong>
+        </mat-error>
+        <div *ngIf="form.hasError('invalidemail', ['email']) && form.get('email').touched ">
+            Do ton tai email
+        </div>
+    </mat-form-field>
+    <label for="">Gender:</label>
+    <mat-radio-group class="example-radio-group">
+        <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+            {{season}}
+        </mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field class="">
+        <span matPrefix>+84 &nbsp;</span>
+        <input type="tel" matInput placeholder="Telephone">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <div formGroupName="pw">
+        <div class="formgroup row">
+            <label for="" class="col">
+        Password
+        <input type="password" class="form-control" formControlName="password">
+      </label>
+        </div>
+        <div class="formgroup row">
+            <label for="" class="col">
+        ConfirmPassword
+        <input type="password" formControlName="confirmPassword" class="form-control">
+      </label>
+        </div>
+        <div class="col alert alert-danger" role="alert" *ngIf="form.hasError('passwordnotmatch', ['pw'])  ">
+            Password khong trung nhau
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-info" type="submit">Submit</button>
+    </div>
+</form>
