@@ -1,7 +1,7 @@
 <header class="header">
-    <nav class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-transparent nk-navbar-white-text-on-top nk-navbar-fixed nk-navbar-solid" [ngStyle]="{'background-color' : background ? 'white' : ''}">
     <div class="container" >
-        <div class="row" [ngStyle]="{'background-color' : background ? 'white' : ''}">
+        <div class="row">
+            <nav class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-transparent nk-navbar-white-text-on-top nk-navbar-fixed nk-navbar-solid" [ngStyle]="{'background-color' : background ? 'white' : ''}">
             <div class="col-md-6">
                 <img src="https://cdn-wp.nkdev.info/snow/demo-one-page-agency/wp-content/themes/snow/assets/images/logo-light.svg" [ngStyle]="{'display' : hiden ? 'none' : 'block'} " width="100px">
                 <img src="https://cdn-wp.nkdev.info/snow/demo-one-page-agency/wp-content/themes/snow/assets/images/logo.svg" style="display:none" [ngStyle]="{'display' : block ? 'block' : 'none'} "  width="100px">
@@ -29,6 +29,7 @@
                     </li>
                 </ul>
             </div>
+            </nav>
         </div>
         <div class="bg-image-overlay"></div>
         <div class="row">
@@ -60,7 +61,6 @@
         </div>
 
     </div>
-    </nav>
 </header>
 <div class="before-text"></div>
 <div class="bg-dark">
