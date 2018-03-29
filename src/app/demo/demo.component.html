@@ -1,9 +1,10 @@
 <header class="header">
-    <div class="container" [ngStyle]="{'background-color' : background ? 'white' : ''}">
-        <div class="row">
+    <nav class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-transparent nk-navbar-white-text-on-top nk-navbar-fixed nk-navbar-solid" [ngStyle]="{'background-color' : background ? 'white' : ''}">
+    <div class="container" >
+        <div class="row" [ngStyle]="{'background-color' : background ? 'white' : ''}">
             <div class="col-md-6">
                 <img src="https://cdn-wp.nkdev.info/snow/demo-one-page-agency/wp-content/themes/snow/assets/images/logo-light.svg" [ngStyle]="{'display' : hiden ? 'none' : 'block'} " width="100px">
-                <img src="https://cdn-wp.nkdev.info/snow/demo-one-page-agency/wp-content/themes/snow/assets/images/logo.svg" style="display:none" [ngStyle]="{'display' : block ? 'block' : 'none'} ">
+                <img src="https://cdn-wp.nkdev.info/snow/demo-one-page-agency/wp-content/themes/snow/assets/images/logo.svg" style="display:none" [ngStyle]="{'display' : block ? 'block' : 'none'} "  width="100px">
             </div>
 
             <div class="col-6">
@@ -29,6 +30,7 @@
                 </ul>
             </div>
         </div>
+        <div class="bg-image-overlay"></div>
         <div class="row">
             <div class="col-md-12 text-center">
                 <h2>New Branding Agency</h2>
@@ -58,6 +60,7 @@
         </div>
 
     </div>
+    </nav>
 </header>
 <div class="before-text"></div>
 <div class="bg-dark">
@@ -269,19 +272,19 @@
             <ul class="nk-contact-info">
                 <li>
                     <strong>Address:</strong>
-                    <br> 10111 Santa Monica Boulevard, LA
+                     10111 Santa Monica Boulevard, LA
                 </li>
                 <li class="phone">
                     <strong>Phone:</strong>
-                    <br>+44 987 065 908
+                    +44 987 065 908
                 </li>
                 <li class="email">
                     <strong>Email:</strong>
-                    <br> info@Example.com
+                     info@Example.com
                 </li>
                 <li class="fax">
                     <strong>Fax:</strong>
-                    <br>+44 987 065 909
+                    +44 987 065 909
                 </li>
             </ul>
         </div>
